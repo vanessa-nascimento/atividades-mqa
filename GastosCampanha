@@ -1,4 +1,5 @@
  partido15 <- candidatos[candidatos$NR_PARTIDO=="15",] //pega os dados do partido 15 MDB
  gastoPartido15 <- partido15[,c('VR_DESPESA_MAX_CAMPANHA')] //seleciona os gastos dos candidatos do partido 15 MDB
  View(gastoPartido15) //mostra os gastos dos candidatos do partido 15 MDB
+ write.csv(gastoPartido15, "GastoPartido15.csv", row.names = FALSE) //exporta os gastos do partido 15 para um csv
  mediaPartido15 <- sum(gastoPartido15)/nrow(gastoPartido15) //calcula media dos gastos do partido 15 MDB ESTA DANDO ERRO
